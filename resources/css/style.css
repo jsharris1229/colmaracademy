@@ -1,0 +1,56 @@
+/* Stylesheet for Colamar Academy
+   Author: J. Stuart Harris
+   Date: 22DEC17
+   Last Updated: 23DEC17
+ */
+
+/* ***** General settings
+ */
+ html,
+ body {
+   font-family: Arial, sans-serif;
+   font-size: 16px;
+ }
+
+/* ***** Top navigation bar (header)
+*/
+header {
+
+}
+
+/* ***** Banner section
+*/
+.banner {
+
+}
+
+/* ***** Overiew section
+*/
+.overview {
+
+}
+
+/* ***** Courses section
+*/
+.courses {
+
+}
+
+/* ***** Thesis section
+*/
+.thesis {
+
+}
+
+/* ***** Footer
+*/
+footer {
+
+}
+
+/* Allow for blank space at the end so content can scroll comfortably up,
+   for better readability  
+ */
+.endspace {
+
+}
