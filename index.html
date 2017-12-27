@@ -11,20 +11,30 @@
 
     <!-- Stylesheets: start with standard reset -->
     <link href="resources/css/reset.css" rel="stylesheet">
-    <link hrexf="resources/css/style.css" rel="stylesheet">
+    <link href="resources/css/style.css" rel="stylesheet">
   </head>
 
   <body>
   <!-- ***** Top navigation bar (header) -->
     <header>
-      <!-- Logo here -->
-      On Campus
-      Online
-      For Companies
-      Sign In
+      <div class="leftlogo">
+        <img src="resources/images/ic-logo.svg" alt="Academy Logo">
+        <span>COLMAR</span><span>ACADEMY</span>
+      </div> <!-- end .leftlog -->
+
+      <nav>
+        <ul>
+          <li>On Campus</li>
+          <li>Online</li>
+          <li>For Companies</li>
+          <li>Sign In</li>
+        </ul>
+      </nav>
     </header>
 
   <!-- ***** Banner section -->
+    <div class="mainwrapper">
+
     <section class="banner">
       <!-- image here -->
       Learn Something New Everyday
@@ -36,6 +46,10 @@
 
   <!-- ***** Overiew section -->
     <section class="overview">
+      <!-- Icons to use elsewhere -->
+      <img src="resources/images/ic-login.svg" alt="Login icon">
+      <img src="resources/images/ic-online.svg" alt="Online icon">
+      <img src="resources/images/ic-on-campus.svg" alt="On Campus (DesK) icon">
       <!-- image here -->
       It doesn't hurt to keep practicing.
       Contrary to common belief, practice doesn't necessarily make perfect.
@@ -127,6 +141,8 @@
       <div class="endspace">
       </div>
     </footer>
+
+  </div> <!-- end .mainwrapper -->
 
   </body>
 </html>

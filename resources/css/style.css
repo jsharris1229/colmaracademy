@@ -15,7 +15,54 @@
 /* ***** Top navigation bar (header)
 */
 header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: fixed;
+   z-index: 20;
+   height: 64px;
+   width: 100%;
+   background-color: white;
+}
 
+.leftlogo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 24px;
+}
+
+.leftlogo img {
+  height: 40px;
+}
+
+.leftlogo span:nth-child(2) {
+  font-weight: bold;
+}
+
+.leftlogo span:nth-child(2),
+.leftlogo span:nth-child(3) {
+  font-size: 1.3rem;
+}
+
+
+header nav {
+  display: flex;
+  padding-right: 24px;
+}
+
+header nav ul {
+  display flex;
+}
+
+header nav ul li {
+  display: inline-flex;
+  margin-left: 16px;
+}
+
+.mainwrapper {
+  position: relative;
+  top: 65px;
 }
 
 /* ***** Banner section
@@ -49,7 +96,7 @@ footer {
 }
 
 /* Allow for blank space at the end so content can scroll comfortably up,
-   for better readability  
+   for better readability
  */
 .endspace {
 
