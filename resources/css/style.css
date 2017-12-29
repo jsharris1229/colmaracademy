@@ -10,6 +10,7 @@
   --banner-text-color: #444;
   --background-color1: lightgray;
   --background-color2: gray;
+  --hover-color: darkcyan;
 }
 
 /* ***** General settings, defaults
@@ -20,6 +21,10 @@
    font-size: 16px;
    color: var(--banner-text-color);
  }
+
+a {
+  text-decoration: none;
+}
 
 /* ***** Top navigation bar (header) **********
    The nav bar contains the Academy logo and name on the left side and the
@@ -71,14 +76,14 @@ header nav ul {
   display flex;
 }
 
-header nav ul li {
+header nav ul li{
   display: inline-flex;
   font-weight: 600;
   margin-left: 16px;
 }
 
-header nav ul li:hover {
-  color: darkcyan;
+header nav ul li a:hover {
+  color: var(--hover-color);
 }
 
 .mainwrapper {
@@ -148,7 +153,7 @@ header nav ul li:hover {
 }
 
 .banner .button:hover {
-  background-color: darkcyan;
+  background-color: var(--hover-color);
   opacity: .8;
 }
 
@@ -275,12 +280,34 @@ header nav ul li:hover {
 /* ***** Footer **********
 */
 footer {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  border-top: 1px solid gray;
+  padding: 16px 24px;
+  color: gray;
+}
 
+footer nav {
+  display: flex;
+}
+
+footer nav ul {
+  display: flex;
+}
+
+footer nav ul li {
+  padding-left: 15px;
+  display: inline;
+}
+
+footer nav ul li a:hover {
+  color: var(--hover-color);
 }
 
 /* Allow for blank space at the end so content can scroll comfortably up,
    for better readability
  */
 .endspace {
-
+  height: 10px;
 }
