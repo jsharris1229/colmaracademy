@@ -4,15 +4,26 @@
    Last Updated: 23DEC17
  */
 
+/* ***** Font import
+ */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Oswald:400,700');
+
+/* ***** Variable definitions
+ */
+:root {
+  --banner-text-color: #444;
+}
+
 /* ***** General settings
  */
  html,
  body {
-   font-family: Arial, sans-serif;
+   font-family: "Open Sans", sans-serif;
    font-size: 16px;
+   color: var(--banner-text-color);
  }
 
-/* ***** Top navigation bar (header)
+/* ***** Top navigation bar (header) **********
 */
 header {
    display: flex;
@@ -40,11 +51,14 @@ header {
   font-weight: bold;
 }
 
+.leftlogo span:nth-child(3) {
+  color: #aaa;
+}
+
 .leftlogo span:nth-child(2),
 .leftlogo span:nth-child(3) {
   font-size: 1.3rem;
 }
-
 
 header nav {
   display: flex;
@@ -60,36 +74,92 @@ header nav ul li {
   margin-left: 16px;
 }
 
+header nav ul li:hover {
+  color: darkcyan;
+  font-weight: 600;
+}
+
 .mainwrapper {
   position: relative;
   top: 65px;
 }
 
-/* ***** Banner section
+/* ***** Banner section **********
 */
 .banner {
-
+  display: flex;
+  justify-content: flex-start;
+  background-color: lightgray;
 }
 
-/* ***** Overiew section
+.banner img {
+  width: 60%;
+  height: 100%;
+  margin: 32px 24px;
+}
+
+.banner div {
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  width: 30%;
+}
+
+.banner h1 {
+  font-family: Oswald, sans-serif;
+  font-size: 56px;
+  font-weight: bold;
+  width: 100%;
+  color: var(--banner-text-color);
+}
+
+.banner p {
+  font-size: 25px;
+  line-height: 1.2em;
+  color: var(--banner-text-color);
+  margin: 30px 0;
+}
+
+.banner .button {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    background-color: var(--banner-text-color);
+    color: white;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 24px;
+}
+
+.banner .button:hover {
+  background-color: darkcyan;
+  opacity: .8;
+}
+
+.banner .button i {
+  padding-right: 10px;
+}
+
+/* ***** Overiew section **********
 */
 .overview {
 
 }
 
-/* ***** Courses section
+/* ***** Courses section **********
 */
 .courses {
 
 }
 
-/* ***** Thesis section
+/* ***** Thesis section **********
 */
 .thesis {
 
 }
 
-/* ***** Footer
+/* ***** Footer **********
 */
 footer {
 
