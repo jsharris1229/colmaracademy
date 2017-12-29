@@ -1,20 +1,18 @@
-/* Stylesheet for Colamar Academy
+/* Stylesheet for Colamar Academy, project for Codecademy
    Author: J. Stuart Harris
    Date: 22DEC17
-   Last Updated: 23DEC17
+   Last Updated: 28DEC17
  */
 
-/* ***** Font import
- */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Oswald:400,700');
-
-/* ***** Variable definitions
+/* ***** Variable definitions for common colors and backgrounds
  */
 :root {
   --banner-text-color: #444;
+  --background-color1: lightgray;
+  --background-color2: gray;
 }
 
-/* ***** General settings
+/* ***** General settings, defaults
  */
  html,
  body {
@@ -24,6 +22,10 @@
  }
 
 /* ***** Top navigation bar (header) **********
+   The nav bar contains the Academy logo and name on the left side and the
+     menu links on the right. The menu links change color on hover.
+
+   The menu bar is fixed at the top.
 */
 header {
    display: flex;
@@ -71,12 +73,12 @@ header nav ul {
 
 header nav ul li {
   display: inline-flex;
+  font-weight: 600;
   margin-left: 16px;
 }
 
 header nav ul li:hover {
   color: darkcyan;
-  font-weight: 600;
 }
 
 .mainwrapper {
@@ -85,17 +87,30 @@ header nav ul li:hover {
 }
 
 /* ***** Banner section **********
+   The banner section consists of an image on the left and text information
+   on the right.
+
+   The text information has a headline and description, followed by a
+   'read more' button. The button changes color on hover.
 */
 .banner {
   display: flex;
   justify-content: flex-start;
-  background-color: lightgray;
+  background-color: var(--background-color1);
+}
+
+.banner div:first-child {
+  display: flex;
+  width: 60%;
+  max-width: 60%;
+  padding: 32px 24px;
+  border: 1px solid black;
 }
 
 .banner img {
-  width: 60%;
-  height: 100%;
-  margin: 32px 24px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .banner div {
@@ -141,10 +156,108 @@ header nav ul li:hover {
   padding-right: 10px;
 }
 
-/* ***** Overiew section **********
-*/
-.overview {
+/* ***** Information section **********
+   This section contains a main 'lead in' picture on the left and 3 smaller
+   information blocks to the right. This is arranged as two columns.
 
+   Column1 is formatted for a larger image and takes 60% of the screen.
+   Column2 is formatted for 40% and has 3 separate information blocks.
+*/
+.information {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.information .column1 {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 60%;
+  max-width: 60%;
+  padding: 32px 24px;
+  border: 1px solid green;
+}
+
+/* 1st column
+ */
+.information .column1 div {
+   width: 100%;
+   padding: 0;
+   margin: 0;
+  }
+
+.information .column1 img {
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.information .column1 h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 32px;
+  margin-bottom: 24px;
+}
+
+.information .column1 p {
+  margin-bottom: 32px;
+}
+
+/* 2nd column
+ */
+.information .column2 {
+  width: 40%;
+  max-width: 40%;
+  padding: 0;
+  margin: 0;
+  border-left: 1px solid gray;
+}
+
+/* Information section, part 2, the info blocks
+ */
+.column2 .infoblock:nth-child(1) {
+  border-bottom: 1px solid lightgray;
+ }
+
+ .column2 .infoblock:nth-child(2) {
+   margin-top: 1px;
+   border-top: 1px solid lightgray;
+  }
+
+.column2 .infoblock:nth-child(3) {
+  background-color: var(--background-color2);
+}
+
+.infoblock {
+  display: flex;
+}
+
+.infoblock .imgcontainer {
+  width: 35%;
+  padding: 20px;
+}
+
+.infoblock img {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.infoblock h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.infoblock .txtcontainer {
+  width: 65%;
+  max-width: 65%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  padding: 0 32px;
+}
+
+.infoblock div p {
+  margin: 15px 0;
 }
 
 /* ***** Courses section **********
