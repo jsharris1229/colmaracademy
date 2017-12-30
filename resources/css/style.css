@@ -33,8 +33,16 @@ a:hover {
   color: var(--hover-color);
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #575757;
 }
@@ -46,6 +54,7 @@ h3 {
 
    The menu bar is fixed at the top.
 */
+
 header {
    display: flex;
    justify-content: space-between;
@@ -179,6 +188,7 @@ header nav ul li a:hover {
   padding-right: 10px;
 }
 
+
 /* ***** Information section **********
    This section contains a main 'lead in' picture on the left and 3 smaller
    information blocks to the right. This is arranged as two columns.
@@ -186,6 +196,7 @@ header nav ul li a:hover {
    Column1 is formatted for a larger image and takes 60% of the screen.
    Column2 is formatted for 40% and has 3 separate information blocks.
 */
+
 .information {
   width: 100%;
   display: flex;
@@ -198,7 +209,6 @@ header nav ul li a:hover {
   width: 60%;
   max-width: 60%;
   padding: 32px 24px;
-  border: 1px solid green;
 }
 
 /* 1st column
@@ -233,7 +243,7 @@ header nav ul li a:hover {
   max-width: 40%;
   padding: 0;
   margin: 0;
-  border-left: 1px solid gray;
+  border-left: 1px solid lightgray;
 }
 
 /* Information section, the .infoblock containers
@@ -295,7 +305,6 @@ header nav ul li a:hover {
   display: flex;
   flex-flow: row wrap;
   margin: 0 72px 32px 72px;
-  width: 100%;
 }
 
 .courses h1 {
@@ -307,7 +316,7 @@ header nav ul li a:hover {
 .courseblock {
   display: flex;
   flex-flow: column nowrap;
-  width: 28%;
+  width: 31%;
   margin: 16px;
   background-color: white;
 }
@@ -335,7 +344,81 @@ header nav ul li a:hover {
 /* ***** Thesis section **********
 */
 .thesis {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+}
 
+.thesis video {
+  width: 100%;
+  height: auto;
+}
+
+.thesis h1 {
+  text-align: center;
+  width: 100%;
+  margin: 32px 24px 0 24px;
+}
+
+.thesiswrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 32px 24px;
+}
+
+.thesiswrapper .column1 {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-right: 12px;
+  width: 60%;
+}
+
+.thesiswrapper .column1 h3 {
+  margin-top: 24px;
+}
+
+.thesiswrapper .column1 p {
+  margin-top: 8px;
+  margin-bottom: 32px;
+}
+
+.thesiswrapper .column2 {
+  flex-flow: column nowrap;
+  margin-left: 12px;
+  width: 40%;
+}
+
+.thesiswrapper .thesisblock:first-child {
+  margin-top: 0;
+  background-color: var(--background-color2);
+}
+
+.thesisblock {
+  display: flex;
+  padding: 16px;
+}
+
+.thesisblock .imgcontainer {
+  width: 35%;
+}
+
+.thesisblock .imgcontainer img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.thesisblock .txtcontainer {
+  width: 65%;
+  margin-left: 16px;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+.thesisblock .txtcontainer h3 {
+  margin-bottom: 12px;
 }
 
 /* ***** Footer **********
@@ -369,6 +452,7 @@ footer nav ul li a:hover {
 /* Allow for blank space at the end so content can scroll comfortably up,
    for better readability
  */
-.endspace {
+/*.endspace {
   height: 10px;
-}
+  width: 100%;
+}*/
