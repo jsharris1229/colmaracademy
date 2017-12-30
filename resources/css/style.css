@@ -9,7 +9,8 @@
 :root {
   --banner-text-color: #444;
   --background-color1: lightgray;
-  --background-color2: gray;
+  --background-color2: seashell;
+  --link-color: gray;
   --hover-color: darkcyan;
 }
 
@@ -23,8 +24,21 @@
  }
 
 a {
+  color: var(--link-color);
   text-decoration: none;
+  width: auto;
 }
+
+a:hover {
+  color: var(--hover-color);
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #575757;
+}
+
 
 /* ***** Top navigation bar (header) **********
    The nav bar contains the Academy logo and name on the left side and the
@@ -47,7 +61,7 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 24px;
+  margin-left: 24px;
 }
 
 .leftlogo img {
@@ -69,7 +83,7 @@ header {
 
 header nav {
   display: flex;
-  padding-right: 24px;
+  margin-right: 24px;
 }
 
 header nav ul {
@@ -108,7 +122,7 @@ header nav ul li a:hover {
   display: flex;
   width: 60%;
   max-width: 60%;
-  padding: 32px 24px;
+  margin: 32px 24px;
   border: 1px solid black;
 }
 
@@ -145,11 +159,15 @@ header nav ul li a:hover {
     flex-flow: row nowrap;
     justify-content: center;
     background-color: var(--banner-text-color);
-    color: white;
+    color: lightgray;
     width: 100%;
     padding-top: 8px;
     padding-bottom: 8px;
     font-size: 24px;
+}
+
+.button a {
+  color: white;
 }
 
 .banner .button:hover {
@@ -218,7 +236,7 @@ header nav ul li a:hover {
   border-left: 1px solid gray;
 }
 
-/* Information section, part 2, the info blocks
+/* Information section, the .infoblock containers
  */
 .column2 .infoblock:nth-child(1) {
   border-bottom: 1px solid lightgray;
@@ -247,11 +265,6 @@ header nav ul li a:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.infoblock h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
 .infoblock .txtcontainer {
   width: 65%;
   max-width: 65%;
@@ -266,9 +279,57 @@ header nav ul li a:hover {
 }
 
 /* ***** Courses section **********
+    This section has a title, followed by 6 course descriptions. Each block
+    is contained in an .infoblock box, which are arranged using the flexbox
+    model to create 2 rows of 3 boxes.
 */
 .courses {
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  width: 100%;
+  background-color: var(--background-color1);
+}
 
+.coursewrapper {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 72px 32px 72px;
+  width: 100%;
+}
+
+.courses h1 {
+  margin: 32px 72px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.courseblock {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 28%;
+  margin: 16px;
+  background-color: white;
+}
+
+.courseblock img {
+  width: 100%;
+  height: auto;
+}
+
+.courseblock h3 {
+  padding: 16px;
+  padding-bottom: 8px;
+}
+
+.courseblock a {
+  padding: 8px 16px;
+  text-transform: uppercase;
+}
+
+.courseblock span {
+  padding: 8px 16px;
+  padding-bottom: 16px;
 }
 
 /* ***** Thesis section **********
