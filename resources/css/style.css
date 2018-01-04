@@ -8,8 +8,8 @@
  */
 :root {
   --banner-text-color: #444;
-  --background-color1: lightgray;
-  --background-color2: seashell;
+  --background-color1: gainsboro;
+  --background-color2: linen;
   --link-color: gray;
   --hover-color: darkcyan;
 }
@@ -31,6 +31,7 @@ a {
 
 a:hover {
   color: var(--hover-color);
+  text-decoration: underline;
 }
 
 h1 {
@@ -105,13 +106,10 @@ header nav ul li{
   margin-left: 16px;
 }
 
-header nav ul li a:hover {
-  color: var(--hover-color);
-}
-
 .mainwrapper {
   position: relative;
   top: 65px;
+  width: 100%;
 }
 
 /* ***** Banner section **********
@@ -123,67 +121,87 @@ header nav ul li a:hover {
 */
 .banner {
   display: flex;
-  justify-content: flex-start;
+  width: 100%;
   background-color: var(--background-color1);
 }
 
+/* First column
+ */
 .banner div:first-child {
   display: flex;
   width: 60%;
   max-width: 60%;
   margin: 32px 24px;
-  border: 1px solid black;
 }
 
 .banner img {
   width: 100%;
-  height: auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+              0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.banner div {
+/* Second column
+ */
+.banner div:last-child {
   display: flex;
   justify-content: center;
   flex-flow: column nowrap;
-  width: 30%;
+  width: 40%;
 }
 
-.banner h1 {
+.banner div:last-child h1 {
   font-family: Oswald, sans-serif;
   font-size: 56px;
   font-weight: bold;
-  width: 100%;
+  margin-left: 30px;
+  width: 80%;
   color: var(--banner-text-color);
 }
 
-.banner p {
+.banner div:last-child p {
   font-size: 25px;
+  margin: 30px auto 30px 30px;
+  width: 80%;
   line-height: 1.2em;
   color: var(--banner-text-color);
-  margin: 30px 0;
 }
 
-.banner .button {
+.banner div:last-child .button {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
     background-color: var(--banner-text-color);
-    color: lightgray;
-    width: 100%;
+    color: white;
+    font-size: 24px;
+    width: 80%;
+    margin-left: 30px;
     padding-top: 8px;
     padding-bottom: 8px;
-    font-size: 24px;
 }
 
-.button a {
+.button i {
+  color: var(--background-color1);
+}
+
+.banner div:last-child .button:hover {
   color: white;
+  background-color: var(--hover-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+               0 6px 20px rgba(0, 0, 0, 0.19);
+  text-decoration: none;
 }
 
-.banner .button:hover {
+
+/*
+.banner div:last-child .button:hover {
   background-color: var(--hover-color);
   opacity: .8;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+              0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+*/
 .banner .button i {
   padding-right: 10px;
 }
@@ -443,10 +461,6 @@ footer nav ul {
 footer nav ul li {
   padding-left: 15px;
   display: inline;
-}
-
-footer nav ul li a:hover {
-  color: var(--hover-color);
 }
 
 /* Allow for blank space at the end so content can scroll comfortably up,
