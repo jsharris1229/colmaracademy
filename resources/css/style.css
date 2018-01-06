@@ -12,6 +12,7 @@
   --background-color2: linen;
   --link-color: gray;
   --hover-color: darkcyan;
+  --mobile-size: 480px;
 }
 
 /* ***** General settings, defaults
@@ -48,7 +49,23 @@ h3 {
   color: #575757;
 }
 
+/* General settings for mobile and normal screen sizes
+ */
+@media only screen and (min-width: 500px) {
+  .narrow-screen {
+    display: none;
+  }
+}
 
+/* Mobile size
+    >> Size set using --mobile-size variable
+    Each section has a similar section for responsive sizes.
+ */
+@media only screen and (max-width: 499px) {
+  .wide-screen {
+    display: none;
+  }
+}
 /* ***** Top navigation bar (header) **********
    The nav bar contains the Academy logo and name on the left side and the
      menu links on the right. The menu links change color on hover.
@@ -111,6 +128,34 @@ header nav ul li{
   top: 65px;
   width: 100%;
 }
+
+/* Mobile size
+    >> Size set using --mobile-size variable
+    Each section has a similar section for responsive sizes.
+ */
+@media only screen and (max-width: 499px) {
+  header div.wide-screen {
+    display: none;
+  }
+
+  header div.narrow-screen,
+  header div.narrow-screen nav {
+    width: 100%;
+  }
+
+  .narrow-screen nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+/* Icons to use elsewhere
+<img src="resources/images/ic-login.svg" alt="Login icon">
+<img src="resources/images/ic-online.svg" alt="Online icon">
+<img src="resources/images/ic-on-campus.svg" alt="On Campus (DesK) icon">
+*/
 
 /* ***** Banner section **********
    The banner section consists of an image on the left and text information
@@ -206,6 +251,66 @@ header nav ul li{
   padding-right: 10px;
 }
 
+@media only screen and (max-width: 499px) {
+  .banner {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+  }
+
+  .banner div:first-child {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+   }
+
+  .banner div:first-child img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .banner div:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 24px 0;
+    margin: 0;
+  }
+
+  .banner div:last-child h1,
+  .banner div:last-child p,
+  .banner div:last-child .button {
+    width: 100%;
+    padding: 0;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .banner div:last-child h1 {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .banner div:last-child p{
+    margin-bottom: 24px;
+  }
+
+  .banner div:last-child .button {
+    margin-bottom: 32px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+}
 
 /* ***** Information section **********
    This section contains a main 'lead in' picture on the left and 3 smaller
@@ -304,6 +409,47 @@ header nav ul li{
 
 .infoblock div p {
   margin: 15px 0;
+}
+
+@media only screen and (max-width: 499px) {
+  .information .column1 {
+    display: none;
+  }
+  .information {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 1px solid purple;
+  }
+  .information .column2 {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 20px;
+    border: 1px solid red;
+   }
+  .information .column2 .infoblock .imgcontainer {
+    width: 100%;
+    height: 100%;
+  }
+
+  .information .column2 .infoblock {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    border: 1px solid green;
+   }
+
+   .information .column2 .infoblock .txtcontainer {
+     display: flex;
+     flex-flow: row wrap;
+     width: 100%;
+     padding: 0;
+     margin: 0;
+   }
 }
 
 /* ***** Courses section **********

@@ -20,19 +20,31 @@
   <body>
   <!-- ***** Top navigation bar (header) -->
     <header>
-      <div class="leftlogo">
+      <div class="leftlogo wide-screen">
         <img src="resources/images/ic-logo.svg" alt="Academy Logo">
         <span>COLMAR</span><span>ACADEMY</span>
       </div> <!-- end .leftlog -->
 
-      <nav>
-        <ul>
+      <nav class="wide-screen">
+        <ul role="presentation"> <!-- ARIA for accessibility -->
           <li><a href="#">On Campus</a></li>
           <li><a href="#">Online</a></li>
           <li><a href="#">For Companies</a></li>
           <li><a href="#">Sign In</a></li>
         </ul>
       </nav>
+
+      <div class="narrow-screen">
+        <nav>
+          <ul role="presentation">
+            <li><img src="resources/images/ic-logo.svg" alt="Academy Logo"></li>
+            <li><img src="resources/images/ic-on-campus.svg" alt=""</li>
+            <li><img src="resources/images/ic-online.svg" alt=""</li>
+            <li><img src="resources/images/ic-login.svg" alt=""</li>
+          </ul>
+        </nav>
+      </div>
+
     </header>
 
   <!-- ***** Banner section -->
@@ -40,7 +52,7 @@
 
     <section class="banner">
       <div>
-        <img src="resources/images/banner.jpg" alt="Students studying.">
+        <img src="resources/images/banner.jpg" alt="Students studying on park bench.">
       </div>
 
       <div>
@@ -58,14 +70,9 @@
 
   <!-- ***** Overiew section -->
     <section class="information">
-      <!-- Icons to use elsewhere
-      <img src="resources/images/ic-login.svg" alt="Login icon">
-      <img src="resources/images/ic-online.svg" alt="Online icon">
-      <img src="resources/images/ic-on-campus.svg" alt="On Campus (DesK) icon">
-      -->
 
       <div class="column1">
-          <img src="resources/images/information-main.jpg" alt="Student reading">
+          <img src="resources/images/information-main.jpg" alt="Student reading a book.">
 
         <h2>It doesn't hurt to keep practicing.</h2>
         <p>"Contrary to common belief, practice doesn't necessarily make perfect.
@@ -81,7 +88,10 @@
              This format follows for all blocks in this column -->
         <div class="infoblock">
           <div class="imgcontainer">
-            <img src="resources/images/information-orientation.jpg" alt="Students walking.">
+            <img class="wide-screen" src="resources/images/information-orientation.jpg"
+               alt="Students walking on cobblestone.">
+            <img class="narrow-screen" src="resources/images/information-orientation-mobile.jpg"
+               alt="Students walking on cobblestone.">
           </div>
           <div class="txtcontainer">
             <h3>Orientation Date</h3>
@@ -92,7 +102,10 @@
 
         <div class="infoblock">
           <div class="imgcontainer">
-            <img src="resources/images/information-campus.jpg" alt="Study Hall.">
+            <img class="wide-screen" src="resources/images/information-campus.jpg"
+               alt="Students in study Hall.">
+            <img class="narrow-screen" src="resources/images/information-campus-mobile.jpg"
+               alt="Students in study Hall.">
           </div>
           <div class="txtcontainer">
             <h3>Our Campus</h3>
@@ -103,7 +116,10 @@
 
         <div class="infoblock">
           <div class="imgcontainer">
-            <img src="resources/images/information-guest-lecture.jpg" alt="Oliver Sack.">
+            <img class="wide-screen" src="resources/images/information-guest-lecture.jpg"
+               alt="Oliver Sack, guest lecture.">
+            <img class="narrow-screen" src="resources/images/information-guest-lecture-mobile.jpg"
+               alt="Oliver Sack, guest lecture.">
           </div>
           <div class="txtcontainer">
             <h3>Our Guest Lecture</h3>
@@ -123,14 +139,14 @@
       <div class="coursewrapper">
 
         <div class="courseblock">
-          <img src="resources/images/course-software.jpg" alt="Software Engineering">
+          <img src="resources/images/course-software.jpg" alt="Software Engineering. Computer on desk with lamp.">
           <h3><i class="fa fa-code-fork" aria-hidden="true"></i> Software Engineering</h3>
           <a href="#">Courses</a>
           <span>Web Development, Mobile Development, iOT, APIs</span>
         </div>
 
         <div class="courseblock">
-          <img src="resources/images/course-computer-art.jpg" alt="Computer Art">
+          <img src="resources/images/course-computer-art.jpg" alt="Computer Art. Hand holding smart phone.">
           <h3><i class="fa fa-file-image-o" aria-hidden="true"></i> Computer Art</h3>
           <a href="#">Courses</a>
           <span>Imaging & Design, Web Design, Motion Graphics & Visual Effects,
@@ -138,28 +154,28 @@
         </div>
 
         <div class="courseblock">
-          <img src="resources/images/course-design.jpg" alt="Design">
+          <img src="resources/images/course-design.jpg" alt="Design. Person using antique camera.">
           <h3><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Design</h3>
           <a href="#">Courses</a>
           <span>User Experience Design, User Research, Visual Design</span>
         </div>
 
         <div class="courseblock">
-          <img src="resources/images/course-data.jpg" alt="Data">
+          <img src="resources/images/course-data.jpg" alt="Data. Laptop open to spreasheet.">
           <h3><i class="fa fa-database" aria-hidden="true"></i> Data</h3>
           <a href="#">Courses</a>
           <span>Data Science, Big Data, Data Visualization</span>
         </div>
 
         <div class="courseblock">
-          <img src="resources/images/course-business.jpg" alt="Business">
+          <img src="resources/images/course-business.jpg" alt="Business. A chess set.">
           <h3><i class="fa fa-building-o" aria-hidden="true"></i> Business</h3>
           <a href="#">Courses</a>
           <span>Product Development, Business Development, Startup</span>
         </div>
 
         <div class="courseblock">
-          <img src="resources/images/course-marketing.jpg" alt="Marketing">
+          <img src="resources/images/course-marketing.jpg" alt="Marketing. Person using smart watch.">
           <h3><i class="fa fa-shopping-cart" aria-hidden="true"></i> Marketing</h3>
           <a href="#">Courses</a>
           <span>Analytics, Content Marketing, Mobile Marketing</span>
@@ -218,7 +234,7 @@
     <footer>
       <span>&copy; Colmar Academy. All Rights Reserved.</span>
       <nav>
-        <ul>
+        <ul role="presentation">
           <li><a href="#">Terms</a></li>
           <li><a href="#">Privacy</a></li>
         </ul>
