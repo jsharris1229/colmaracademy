@@ -504,6 +504,47 @@ header nav ul li{
   padding-bottom: 16px;
 }
 
+/* Mobile styles for the course section
+ */
+@media only screen and (max-width: 499px) {
+  section.courses {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .courses .h1 {
+    margin: 32px auto 12px auto;
+  }
+  .courses .coursewrapper {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 0 28px 0; /* 28px + 4px from .courseblock */
+  }
+  .coursewrapper .courseblock {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 8px 16px;
+  }
+  .courseblock h3 {
+    padding: 16px auto 24px 16px;
+    margin: 0;
+  }
+  .courseblock a {
+    padding: 8px auto 8px 16px;
+    margin: 0;
+  }
+  .courseblock h3:hover {
+    color: var(--hover-color);
+  }
+}
+
 /* ***** Thesis section **********
 */
 .thesis {
