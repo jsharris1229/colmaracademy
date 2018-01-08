@@ -9,7 +9,7 @@
 :root {
   --banner-text-color: #444;
   --background-color1: gainsboro;
-  --background-color2: linen;
+  --background-color2: whitesmoke;
   --link-color: gray;
   --hover-color: darkcyan;
   --mobile-size: 480px;
@@ -49,7 +49,7 @@ h3 {
   color: #575757;
 }
 
-/* General settings for mobile and normal screen sizes
+/* >>>>> General settings for mobile and normal screen sizes
  */
 @media only screen and (min-width: 500px) {
   .narrow-screen {
@@ -57,7 +57,7 @@ h3 {
   }
 }
 
-/* Mobile size
+/* >>>>> Mobile size
     >> Size set using --mobile-size variable
     Each section has a similar section for responsive sizes.
  */
@@ -129,7 +129,7 @@ header nav ul li{
   width: 100%;
 }
 
-/* Mobile size
+/* >>>>> Mobile size
     >> Size set using --mobile-size variable
     Each section has a similar section for responsive sizes.
  */
@@ -155,12 +155,6 @@ header nav ul li{
   }
 }
 
-/* Icons to use elsewhere
-<img src="resources/images/ic-login.svg" alt="Login icon">
-<img src="resources/images/ic-online.svg" alt="Online icon">
-<img src="resources/images/ic-on-campus.svg" alt="On Campus (DesK) icon">
-*/
-
 /* ***** Banner section **********
    The banner section consists of an image on the left and text information
    on the right.
@@ -179,11 +173,11 @@ header nav ul li{
 .banner div:first-child {
   display: flex;
   width: 60%;
-  max-width: 60%;
-  margin: 32px 24px;
+  height: 100%;
+  padding: 32px 24px 32px 24px;
 }
 
-.banner img {
+.banner div:first-child img {
   width: 100%;
   height: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
@@ -197,6 +191,7 @@ header nav ul li{
   justify-content: center;
   flex-flow: column nowrap;
   width: 40%;
+  margin: 32px 0;
 }
 
 .banner div:last-child h1 {
@@ -255,6 +250,8 @@ header nav ul li{
   padding-right: 10px;
 }
 
+/* >>>>> Mobile section
+ */
 @media only screen and (max-width: 499px) {
   .banner {
     display: flex;
@@ -349,6 +346,7 @@ header nav ul li{
 .information .column1 img {
   width: 100%;
   max-width: 100%;
+  min-width: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -390,10 +388,12 @@ header nav ul li{
 
 .infoblock {
   display: flex;
+  overflow: auto;
 }
 
 .infoblock .imgcontainer {
   width: 35%;
+  min-width: 110px;
   padding: 20px;
 }
 
@@ -415,7 +415,7 @@ header nav ul li{
   margin: 15px 0;
 }
 
-/* Mobile size styles
+/* >>>>> Mobile size styles
  */
 @media only screen and (max-width: 499px) {
   .information .column1 {
@@ -485,6 +485,7 @@ header nav ul li{
   flex-flow: column nowrap;
   width: 31%;
   margin: 16px;
+  overflow: auto;
   background-color: white;
 }
 
@@ -508,7 +509,7 @@ header nav ul li{
   padding-bottom: 16px;
 }
 
-/* Mobile styles for the course section
+/* >>>>> Mobile styles for the course section
  */
 @media only screen and (max-width: 499px) {
   section.courses {
@@ -560,7 +561,6 @@ header nav ul li{
 
 .thesis video {
   width: 100%;
-  height: auto;
 }
 
 .thesis h1 {
@@ -629,7 +629,7 @@ header nav ul li{
   margin-bottom: 12px;
 }
 
-/* Mobile section for responsive design
+/* >>>>> Mobile section for responsive design
  */
 @media only screen and (max-width: 499px) {
   .thesiswrapper {
@@ -639,9 +639,9 @@ header nav ul li{
   .thesiswrapper .column1 {
     display: flex;
     flex-flow: column nowrap;
-    margin: 0;
-    padding: 16px 0 24px 0;
+    margin: 16px 0 24px 0;
     width: 100%;
+    height: 100%;
   }
 
 }
@@ -670,6 +670,8 @@ footer nav ul li {
   display: inline;
 }
 
+/* >>>>> Mobile section for Footer
+ */
 @media only screen and (max-width: 499px) {
   footer {
     border: none;
