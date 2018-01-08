@@ -143,11 +143,15 @@ header nav ul li{
     width: 100%;
   }
 
-  .narrow-screen nav ul {
+  header .narrow-screen nav ul {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
+
+  header .narrow-screen a:hover {
+    border: 2px solid var(--hover-color);
   }
 }
 
@@ -625,6 +629,23 @@ header nav ul li{
   margin-bottom: 12px;
 }
 
+/* Mobile section for responsive design
+ */
+@media only screen and (max-width: 499px) {
+  .thesiswrapper {
+    margin: 0;
+  }
+
+  .thesiswrapper .column1 {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0;
+    padding: 16px 0 24px 0;
+    width: 100%;
+  }
+
+}
+
 /* ***** Footer **********
 */
 footer {
@@ -647,6 +668,12 @@ footer nav ul {
 footer nav ul li {
   padding-left: 15px;
   display: inline;
+}
+
+@media only screen and (max-width: 499px) {
+  footer {
+    border: none;
+  }
 }
 
 /* Allow for blank space at the end so content can scroll comfortably up,
